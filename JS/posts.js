@@ -1,4 +1,3 @@
-console.log("hit")
 
 window.onload = (event) => {
   fetch('https://rocky-forest-99036.herokuapp.com/api/posts', {method: 'GET'})
