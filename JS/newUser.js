@@ -19,8 +19,15 @@ async function postData(url = 'localhost:8080/users', data = {
 }
 
 function newUserSubmit(event) {
-  console.log(event);
   event.preventDefault();
+  //this will give you the value of input field
+  const email = document.getElementById("email").value
+  console.log(email);
+  //?maybe call async POST from here.
 }
-const form = document.getElementById('form')
-form.addEventListener('submit', newUserSubmit);
+
+
+window.onload = function(){
+  var form = document.getElementById("formPage");
+  form.addEventListener("submit", newUserSubmit,true);
+};

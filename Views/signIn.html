@@ -1,15 +1,15 @@
 <head>
   <script type="text/javascript" src="../JS/newUser.js"></script>
 </head>
-
-<form action="action_page.html" style="border:1px solid #ccc" method ="POST" id="form">
-  <div class="container">
+<div class="container">
+<form id="formPage" action="action_page.html" style="border:1px solid #ccc" method ="POST" >
+  
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
 
     <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
@@ -25,7 +25,8 @@
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <input type="submit" value="Sign Up" class="signupbtn" />
     </div>
-  </div>
+ 
 </form>
+</div>
