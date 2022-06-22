@@ -1,33 +1,53 @@
-async function postData(url = 'localhost:8080/users', data = {
-}) {
- 
-  // Default options are marked with *
-  const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data) // body data type must match "Content-Type" header
-  });
-  return response.json(); // parses JSON response into native JavaScript objects
-}
-
-function newUserSubmit(event) {
-  event.preventDefault();
-  //this will give you the value of input field
-  const email = document.getElementById("email").value
-  console.log(email);
-  //?maybe call async POST from here.
-}
-
 
 window.onload = function(){
   var form = document.getElementById("formPage");
   form.addEventListener("submit", newUserSubmit,true);
 };
+
+async function newUserSubmit(event) {
+  event.preventDefault();
+  const username = document.getElementById("username").value
+  const password = document.getElementById("psw").value
+  const passwordChecker = document.getElementById("pswCheck").value
+  if(password === passwordChecker) {
+    data = {username: username, password: password, enabled: true};
+    let response = await fetch('https://rocky-forest-99036.herokuapp.com/api/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+     body:JSON.stringify(data)})
+     if(response.status === 409){
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `Username ${username} is allready in use!`,
+        footer: '<a href="">Why do I have this issue?</a>'
+      })
+     }
+  } else {
+    let toastMixin = Swal.mixin({
+      toast: true,
+    icon: 'success',
+    title: 'General Title',
+    animation: false,
+    position: 'top-right',
+    showConfirmButton: false,
+    timer: 5000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  });
+    
+    toastMixin.fire({
+      title: 'Password does not match',
+      icon: 'error'
+    })
+    
+  }
+}
+
+
+
