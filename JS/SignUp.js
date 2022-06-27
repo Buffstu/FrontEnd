@@ -2,6 +2,12 @@
 window.onload = function(){
   var form = document.getElementById("formPage");
   form.addEventListener("submit", newUserSubmit,true);
+
+  var profileNav = document.getElementById("btn_profile");
+  profileNav.addEventListener("click", profileNavigate);
+
+  var homeNav = document.getElementById("home");
+  homeNav.addEventListener("click", homeNavigate);
 };
 
 async function newUserSubmit(event) {
@@ -20,10 +26,11 @@ async function newUserSubmit(event) {
      if(response.status === 409){
       Swal.fire({
         icon: 'error',
-        title: 'Oops...',
-        text: `Username ${username} is allready in use!`,
-        footer: '<a href="">Why do I have this issue?</a>'
+        title: 'too bad!',
+        text: `Username ${username} is allready in use!`
       })
+     } else {
+       window.location.href = "../../Views/posts.html"
      }
   } else {
     let toastMixin = Swal.mixin({
@@ -42,11 +49,19 @@ async function newUserSubmit(event) {
   });
     
     toastMixin.fire({
-      title: 'Password does not match',
+      title: 'Passwords need to match',
       icon: 'error'
     })
     
   }
+}
+
+function profileNavigate() {
+  window.location.href = "../../Views/Profile/profile.html"
+}
+
+function homeNavigate(){
+  window.location.href = "../../Views/Feed/Feed.html"
 }
 
 

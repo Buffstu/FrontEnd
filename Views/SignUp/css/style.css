@@ -1,0 +1,432 @@
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+/****-----start-body----****/
+body{
+	 background: url("../images/bg.jpg") no-repeat 0px 0px;
+  background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  padding-bottom: 5em;
+	font-family: 'Lato', sans-serif;
+}
+body a,form li,.submit input[type="submit"]{
+	transition: 0.1s all;
+	-webkit-transition: 0.1s all;
+	-moz-transition: 0.1s all;
+	-o-transition: 0.1s all;
+}
+body h1{
+	text-align: center;
+	font-size: 2.7em;
+	  color: #fff;
+	padding: 1em 0;
+}
+/*---login-form--------*/
+.login {
+  margin:1% auto 7%;
+  width:36%;
+  background: #fff;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  
+  position: relative;
+}
+form li,form li.psw {
+  list-style: none;
+  width:99%;
+  font-weight: 500;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  margin: 1em 0;
+  outline: none;
+}
+form li.psw {
+  width: 48.9%;
+  float: left;
+  margin-right: 2%;
+}
+form li.psw.two{
+ margin-right:0;
+}
+
+form {
+	 padding: 3% 4% 1% 4%;
+}
+.icon {
+   height: 20px;
+  width: 20px;
+  display: block;
+  float: left;
+  margin: 14px -28px 0px 8px;
+}
+.user {
+  background: url(../images/icons.png) no-repeat 0px 0px ;
+}
+.mail {
+  background: url(../images/icons.png) no-repeat 0px -28px ;
+}
+.key {
+    background: url(../images/icons.png) no-repeat 0px -57px;
+}
+.login input[type="text"],.login input[type="password"] {
+   width: 86.9%;
+  padding:1em 1em 1em 3em;
+  color: #999;
+  font-size: 15px;
+  outline: none;
+  font-weight: 300;
+  border: none;
+  background: none;
+}
+.login input[type="password"] {
+  width: 65.9%;
+}
+.dropbox {
+  border-top: 1px solid #ccc;
+}
+.strip {
+  background:#fff;
+  color: #999;
+  width:24px;
+  height:24px;
+  padding:9px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -82%;
+  left: 47%;
+  border: 1px solid #999;
+  font-size: 12px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+    font-size: 1em;
+}
+.submit {
+  margin: 0.5em 0 2em 0;
+  position: relative;
+
+}
+.submit input[type="submit"]{
+  margin-top: 10px;
+  font-size:1.3em;
+    font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  padding:19px 19px;
+  width: 100%;
+  border: none;
+  transition: 0.1s all;
+  -webkit-transition: 0.1s all;
+  -moz-transition: 0.1s all;
+  -o-transition: 0.1s all;
+  background: #9da7b4; 
+    font-family: 'Lato', sans-serif;
+}
+.submit input[type="submit"]:hover{
+  background:#5a95e6;
+}
+.dropbox a {
+  color: #FFF;
+  font-size: 1.3em;
+  display: block;
+  height:61px;
+  line-height:3.2em;
+  text-align: center;
+    font-weight: 400;
+      margin-top: 1.5em;
+}
+.drop:before {
+    background-color: #2561b4;
+  content: url(../images/drop.png) no-repeat;
+  width: 53px;
+  max-height:53px;
+  height: 100%;
+  position: absolute;
+  display: block;
+  padding: 4px 1px;
+  top: 0px;
+  left: -33px;
+}
+.drop {
+  background-color: #5a95e6;
+  font-size:1.2em;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  padding: 0px 20px;
+  margin-left: 37px;
+   transition: 0.1s all;
+  -webkit-transition: 0.1s all;
+  -moz-transition: 0.1s all;
+  -o-transition: 0.1s all;
+}
+.drop:hover{
+   background-color:#2561b4;
+}
+/****************/
+.copy-right {
+	text-align: center;
+	background:url("../images/red.png") repeat;
+	padding: 1em  1em;
+}
+.copy-right p {
+	color: #fff;
+	font-size: 1em;
+	font-weight:400;
+	margin-top: 0.5em;
+}
+.copy-right p a {
+	 color: #fff;
+}
+.copy-right p a:hover {
+	text-decoration: underline;
+}
+/*-----start-responsive-design------*/
+@media (max-width:1440px){
+  .login {
+  margin:2% auto 7%;
+  width:38%;
+  }
+  .strip {
+  width:21px;
+  height:21px;
+  padding:9px;
+  bottom: -86%;
+  left: 47%;
+}
+}
+@media (max-width:1366px){
+  .login {
+  margin: 2% auto 7%;
+    width: 42%;
+}
+ .login input[type="text"], .login input[type="password"] {
+    width: 85.9%;
+}
+.login input[type="password"] {
+  width: 73.9%;
+}
+	.thd-login input[type="password"] {
+  width: 43.8%;
+  float: left;
+  margin-right: 1%;
+  }
+  form li.pass {
+    width: 48.6%;
+  float: left;
+  margin-right: 2%;
+  }
+  .drop:before {
+  width: 54px;
+  max-height: 53px;
+  padding: 4px 1px;
+  top: 0px;
+  left: -37px;
+  }
+  .strip {
+  width: 20px;
+  height: 20px;
+  padding: 7px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -76.5%;
+  left: 48%;
+  font-size: 1em;
+  }
+}
+@media (max-width:1280px){
+   .login {
+  margin: 2% auto 7%;
+    width: 49%;
+  }
+    .sec-login {
+    margin: 8% auto 7%;
+    width: 54%;
+  }
+  .thd-login {
+    margin: 0 auto;
+    width: 55%;
+    padding-top: 6em;
+  }
+	
+}
+@media (max-width:1024px){
+   .login {
+  margin: 2% auto 7%;
+  width: 69%;
+  }
+	body h1  {
+  font-size: 2.4em;
+}
+.strip {
+  width: 23px;
+  height: 23px;
+  padding: 7px;
+  margin: 0 auto;
+  position: absolute;
+    bottom: -80.5%;
+  left: 48%;
+  font-size: 1em;
+}
+
+}
+@media (max-width:768px){
+  body h1{
+  font-size: 2.2em;
+    padding-top: 3em;
+  }
+  .login {
+  margin: 6% auto 18%;
+    width: 81%;
+}
+}
+@media (max-width:640px){
+  .login {
+  margin: 2% auto 7%;
+  width: 87%;
+}
+  .login input[type="text"] {
+  width: 84.9%;
+  }
+  .submit input[type="submit"] {
+  font-size: 1.1em;
+  padding: 16px 16px;
+  }
+  .dropbox a {
+  color: #FFF;
+  font-size: 1.1em;
+  display: block;
+  height: 56px;
+  }
+  .drop:before {
+  background-color: #2561b4;
+  content: url(../images/drop.png) no-repeat;
+  width: 53px;
+  max-height: 48px;
+  }
+  body h1 {
+  font-size: 1.9em;
+  }
+  .strip {
+  width: 23px;
+  height: 23px;
+  padding: 7px;
+  margin: 0 auto;
+  position: absolute;
+    bottom: -93.5%;
+  left: 48%;
+  font-size: 1em;
+}
+
+}
+
+@media (max-width:480px){
+  .login {
+  margin: 2% auto 7%;
+  width: 93%;
+}
+  .login input[type="text"] {
+   width: 83.9%;
+   padding: 0.8em 1em 0.8em 3em;
+  }
+   body h1{
+  font-size:1.6em;
+  }
+  form li.psw {
+  width: 98.9%;
+  float: none;
+  margin-right:0%;
+  }
+  .submit input[type="submit"] {
+  font-size: 1em;
+  }
+  .dropbox a {
+  font-size: 1em;
+  height: 56px;
+  line-height: 3.8em;
+  }
+  .strip {
+  width: 23px;
+  height: 23px;
+  padding: 7px;
+  margin: 0 auto;
+  position: absolute;
+    bottom: -96.5%;
+  left: 48%;
+  font-size: 1em;
+  }
+  .copy-right p {
+  font-size: 0.95em;
+  }
+  form li, form li.psw {
+  margin: 0.5em 0;
+  }
+	
+}
+@media (max-width:320px){
+  .login {
+  margin: 2% auto 7%;
+  width: 94%;
+}
+	body h1 {
+  font-size: 1.3em;
+  }
+  .login input[type="text"] {
+  width: 75.9%;
+  padding: 0.8em 1em 0.8em 3em;
+  font-size: 15px;
+}
+.submit input[type="submit"] {
+  font-size: 0.9em;
+  padding: 14px 14px;
+}
+.dropbox a {
+  font-size: 0.8em;
+  height: 46px;
+    margin-top: 2em;
+}
+.drop:before {
+  background-color: #2561b4;
+  content: url(../images/drop.png) no-repeat;
+  width: 53px;
+  max-height: 38px;
+}
+.copy-right p {
+  font-size: 0.9em;
+  line-height: 1.7em;
+  }
+  .strip {
+  width: 19px;
+  height: 19px;
+  padding: 7px;
+  margin: 0 auto;
+  position: absolute;
+    bottom: -106.5%;
+  left: 45%;
+  font-size: 0.9em;
+}
+}
