@@ -11,7 +11,7 @@ async function newUserSubmit(event) {
   const passwordChecker = document.getElementById("pswCheck").value
   if(password === passwordChecker) {
     data = {username: username, password: password, enabled: true};
-    let response = await fetch('https://rocky-forest-99036.herokuapp.com/api/users', {
+    let response = await fetch('https://rocky-forest-99036.herokuapp.com/users', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
