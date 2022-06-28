@@ -1,6 +1,6 @@
 
 window.onload = (event) => {
-  fetch('https://rocky-forest-99036.herokuapp.com/api/posts', {method: 'GET'})
+  fetch('http://localhost:8080/posts', {method: 'GET'})
       .then(response => response.json())
       .then(data => addPosts(data))
 };
