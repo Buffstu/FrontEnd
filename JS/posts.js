@@ -4,7 +4,8 @@ window.onload = (event) => {
     method: 'GET',
     credentials: "include",
     headers: {
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
+      "Authorization":"Bearer"
     },
   }).then(response => response.json())
       .then(data => addPosts(data))
