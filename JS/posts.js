@@ -1,7 +1,13 @@
 
 window.onload = (event) => {
-  fetch('http://localhost:8080/posts', {method: 'GET'})
-      .then(response => response.json())
+  fetch('http://localhost:8080/posts', {
+    method: 'GET',
+    credentials: "include",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Credentials": true,
+    },
+  }).then(response => response.json())
       .then(data => addPosts(data))
 };
 function addPosts(data) {
