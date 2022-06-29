@@ -8,8 +8,10 @@
   <nav>
       <ul>
           <li> <a href="#" id="fb"> <i class="fab fa-facebook-f    "></i> </a> </li>
-          <li> <button id="search_btn" class="tooltip" data-tooltip="Search"> <i class="fas fa-search    "></i> </button> </li>
-          <li id="space2"></li>
+          <li class="switch"> 
+            <button id="search_btn" class="search-box" data-tooltip="Search"> <i class="fas fa-search"></i> </button>
+            <input id="search_text" type ="text" class ="input-search" placeholder="Type to search..">
+         </li>
           <li> <a class="tooltip active" data-tooltip="Home" href="#" id="home"> <i class="fas fa-home    "></i> </a> </li>
           <li> <a class="tooltip" data-tooltip="Group" href="#" id="group"> <i class="fas fa-user-friends    "></i> </a></li>
           <li> <a class="tooltip" data-tooltip="Watch" href="#" id="tv"> <i class="fas fa-tv    "></i> </a> </li>
@@ -25,15 +27,13 @@
 <body>
   <h1>Feed</h1>
 
+  
+
   <form id="newPostTextArea">
     <textarea id="newPost" name="newPost" placeholder="What's on your mind?" rows="8" cols="50"></textarea>
     <br>
     
     <input type="submit" value="Post" id="postSubmitButtn" onClick="document.location.reload(true)">
   </form>
-
-
-  <ul id="posts">
-  </ul>
 
 </body>

@@ -166,9 +166,9 @@
 
 	body {
 	    font: 300 13px/1.6 Roboto, Helvetica, Arial;
-	    color: rgb(148, 11, 11);
+	    
 	    position: relative;
-	    background: #448AFF;
+	    
 	    height: 100vh;
 	    text-align: center;
 		  /* background: #3f51b5; */
@@ -183,7 +183,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-color: rgba(0,0,0,.5);
+		
 		z-index: -1
 	}
 

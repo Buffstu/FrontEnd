@@ -19,6 +19,7 @@ nav.vertical ul li{	display:block;}/* vertical menu */
 nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 
+
 *{
   box-sizing: border-box;
 }
@@ -71,6 +72,25 @@ nav ul li #search_btn{
     border-radius: 50%;
     cursor: pointer;
 }
+
+
+.switch input{
+  opacity: 0;
+  width: 300px;
+  border-radius: 0px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: #e6e6e6;
+  padding-right: 40px;
+  color:rgb(0, 0, 0);
+  transition: all 500ms cubic-bezier(1, 0.210, 0.35, 2);
+}
+
 nav ul li#space1{
     flex: 1;
 }
@@ -94,6 +114,7 @@ nav ul li #btn_profile{
     height: 40px;
     width: 40px;
     display: flex;
+    margin-right: 15px;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
@@ -179,23 +200,23 @@ textarea {
   width: 40%;
   margin: 2% auto 7%;
   position: relative;
-
   text-align: center;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  background-color: white;
+  background-color: transparent;
 }
 #newPost{
+  
   margin: 2% auto;
   outline-color: transparent;
   outline-style: none;
   padding-top: 1em;
   padding-left: 1em;
+  border: transparent;
+  border-radius: 5%;
 }
 
 #postSubmitButtn{
   margin: -2.3% auto 5%;
-  background: #9da7b4; 
+  background:rgb(111, 111, 193); 
   
   margin-left: 280px;
   border: none;
@@ -212,29 +233,24 @@ textarea {
   cursor: pointer;
 }
 
-#posts{
-  margin: 2% auto 7%;
-  width: 40%;
-  text-align: center;
-  list-style: none;
-  display:flex;
-  flex-direction: column-reverse;
-  background-color: white;
-  
-}
-
-#posts li{
+div{
   width: 450px;
   min-height: 200px;
-  height:auto;
-  padding: 0, 2%;
-  margin: 2% auto 3%;
+  border: 1px;
+  border-style: dotted;
+  border-color: #fff;
+}
+
+
+
+.posts{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  min-width: 0;
+  
+  background-color: transparent;
+  
+  
+  color: aqua;
+  margin: 2% auto 3%;
+  
 }
-
-#posts li:not(first-child) {
-  border-top: 1px solid black;
-}
-
