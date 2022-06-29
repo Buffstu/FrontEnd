@@ -13,7 +13,7 @@ window.onload = (event) => {
   search.addEventListener("click", searchToggle);
   
 
-  fetch('https://rocky-forest-99036.herokuapp.com/api/posts', {
+  fetch('https://rocky-forest-99036.herokuapp.com/posts', {
     method: 'GET',
     credentials: "include",
     mode: "cors",
