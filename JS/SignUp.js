@@ -32,7 +32,7 @@ async function newUserSubmit(event) {
         text: `Username ${username} is allready in use!`
       })
      } else {
-       window.location.href = "../../Views/posts.html"
+       window.location.href = "../../Views/Feed/Feed.html"
      }
   } else {
     let toastMixin = Swal.mixin({
